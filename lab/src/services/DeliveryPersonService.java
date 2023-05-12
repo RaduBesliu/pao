@@ -1,29 +1,24 @@
 package services;
 
 import models.DeliveryPerson;
-
-import java.util.Map;
+import repository.DeliveryPersonRepository;
 
 public class DeliveryPersonService {
-    public void getDeliveryPersons(Map<Integer, DeliveryPerson> deliveryPersons) {
-        for (Map.Entry<Integer, DeliveryPerson> entry : deliveryPersons.entrySet()) {
-            System.out.println("---------DELIVERY PERSONS---------");
-            System.out.println(entry.getValue());
-            System.out.println("----------------------------------");
-        }
+    DeliveryPersonRepository deliveryPersonRepository = new DeliveryPersonRepository();
+
+    public void getDeliveryPersons() {
+        deliveryPersonRepository.getDeliveryPeople();
     }
 
-    public DeliveryPerson getDeliveryPersonById(Map<Integer, DeliveryPerson> deliveryPersons, Integer id) {
-        return deliveryPersons.get(id);
+    public void addDeliveryPerson(DeliveryPerson deliveryPerson) {
+        deliveryPersonRepository.addDeliveryPerson(deliveryPerson);
     }
 
-    public void addDeliveryPerson(Map<Integer, DeliveryPerson> deliveryPersons, DeliveryPerson deliveryPerson) {
-        deliveryPersons.put(deliveryPerson.getId(), deliveryPerson);
-        System.out.println("Delivery person added successfully!");
+    public void deleteDeliveryPerson(Integer id) {
+        deliveryPersonRepository.deleteDeliveryPerson(id);
     }
 
-    public void deleteDeliveryPerson(Map<Integer, DeliveryPerson> deliveryPersons, Integer id) {
-        deliveryPersons.remove(id);
-        System.out.println("Delivery person deleted successfully!");
+    public void updateDeliveryPersonHourlyRate(Integer id, Double hourlyRate) {
+        deliveryPersonRepository.updateDeliveryPersonHourlyRate(id, hourlyRate);
     }
 }

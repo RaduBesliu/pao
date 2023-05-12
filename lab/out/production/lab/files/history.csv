@@ -1,0 +1,6 @@
+action,timestamp
+addFood,2023-05-13 01:30:32.448
+updateFoodCalories,2023-05-13 01:30:51.827
+getFoods,2023-05-13 01:30:58.844
+deleteFood,2023-05-13 01:31:04.543
+addBeverage,2023-05-13 01:31:59.854
