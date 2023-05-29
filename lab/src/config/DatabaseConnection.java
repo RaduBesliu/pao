@@ -10,7 +10,7 @@ public class DatabaseConnection {
     private DatabaseConnection() {
     }
 
-    public static Connection getInstance() throws SQLException, ClassNotFoundException {
+    public static Connection getInstance() throws SQLException {
         if (connection == null) {
             String url = "jdbc:mysql://localhost:3306/pao";
             String userName = "root";

@@ -15,3 +15,7 @@ addUser,2023-05-13 01:38:23.249
 updateUserTotalRating,2023-05-13 01:38:38.494
 getUsers,2023-05-13 01:38:51.439
 deleteUser,2023-05-13 01:39:01.134
+getBeverages,2023-05-29 15:07:34.663
+addBeverage,2023-05-29 15:07:55.919
+getBeverages,2023-05-29 15:08:03.071
+deleteBeverage,2023-05-29 15:08:38.519

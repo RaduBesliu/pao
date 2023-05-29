@@ -1,0 +1,2 @@
+test,aur,500,1000
+test,plastic,10,10
